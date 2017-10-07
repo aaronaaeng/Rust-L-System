@@ -4,9 +4,9 @@ version = "0.1.0"
 description = "slightly modified from a public library.  to be used in future projects"
 authors = ["Aaron Aaeng <aaaa9270@colorado.edu>"]
 
-[lib]
-name = "lsystem"
-path = "src/lib.rs"
+
+
+
 
 [dependencies]
 regex = "0.2"
