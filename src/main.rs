@@ -1,5 +1,3 @@
-// rule_set = [Rule.Rule("X", " F-[[X]+X]+F[+FX]-X"), Rule.Rule("F", "FF")]
-
 extern crate regex;
 
 use regex::Regex;
@@ -9,10 +7,7 @@ fn main() {
     let axiom = String::from("X");
     rule_set.push(("X", "F-[[X]+X]+F[+FX]-X"));
     rule_set.push(("F", "FF"));
-    for &(a, b) in rule_set.iter() {
-        println!("a: {}  b: {}", a, b);
-    }
-    println!("{}", replace(rule_set, axiom, 0, 3));
+    println!("{}", replace(rule_set, axiom, 0, 1));
 }
 
 fn replace(rule_set: Vec<(&str, &str)>,
@@ -28,7 +23,7 @@ fn replace(rule_set: Vec<(&str, &str)>,
                     let old_string = new_string;
                     new_string = re.replace_all(&old_string, b).to_string();
                 }
-                return replace(rule_set, new_string, generation+1, gen_count);
+                return replace(rule_set, new_string, generation+1, gen_count)
             }
         }
     }
