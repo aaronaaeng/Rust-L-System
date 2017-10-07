@@ -1,0 +1,6 @@
+[package]
+name = "Rust-L-System"
+version = "0.1.0"
+authors = ["Aaron Aaeng <aaaa9270@colorado.edu>"]
+
+[dependencies]
