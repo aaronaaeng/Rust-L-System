@@ -1,6 +1,13 @@
 [package]
 name = "Rust-L-System"
 version = "0.1.0"
+description = "slightly modified from a public library.  to be used in future projects"
 authors = ["Aaron Aaeng <aaaa9270@colorado.edu>"]
 
-[dependencies]
+[lib]
+name = "lsystem"
+path = "src/lib.rs"
+
+[[example]]
+name = "algae"
+path = "examples/algae.rs"
