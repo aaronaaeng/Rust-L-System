@@ -1,5 +1,5 @@
 // rule_set = [Rule.Rule("X", " F-[[X]+X]+F[+FX]-X"), Rule.Rule("F", "FF")]
-// Modified implementation of https://github.com/atheriel/lsystem/blob/master/src/lib.rs
+// Barely modified implementation of https://github.com/atheriel/lsystem/blob/master/src/lib.rs
 
 use std::mem;
 

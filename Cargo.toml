@@ -7,7 +7,3 @@ authors = ["Aaron Aaeng <aaaa9270@colorado.edu>"]
 [lib]
 name = "lsystem"
 path = "src/lib.rs"
-
-[[example]]
-name = "algae"
-path = "examples/algae.rs"
