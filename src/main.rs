@@ -1,13 +1,19 @@
 extern crate regex;
 
 use regex::Regex;
+use std::process::Command;
 
 fn main() {
     let mut rule_set: Vec<(&str, &str)> = Vec::new();
     let axiom = String::from("X");
     rule_set.push(("X", "F-[[X]+X]+F[+FX]-X"));
     rule_set.push(("F", "FF"));
-    println!("{}", replace(rule_set, axiom, 0, 1));
+    let instructions = replace(rule_set, axiom, 0, 6);
+    Command::new("python3")
+            .arg("src/pturtle.py")
+            .arg(instructions)
+            .spawn()
+            .expect("yikes");
 }
 
 fn replace(rule_set: Vec<(&str, &str)>,
