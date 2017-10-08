@@ -56,6 +56,12 @@ class DrawSystem:
                 self.Stack.pop()
                 pen1.pendown()
                 self.len *= 1/.9
+            if len(self.Stack) > 4:
+                pen1.color("#31932D")
+            elif len(self.Stack) > 2:
+                pen1.color("#478650")
+            else:
+                pen1.color("#996633")
         turtle.mainloop()
 
 def main():

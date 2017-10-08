@@ -3,6 +3,7 @@ extern crate regex;
 use regex::Regex;
 use std::process::Command;
 
+// Initializes the vector of rules.  These can be dynamically assigned by, say, a genetic alg
 fn main() {
     let mut rule_set: Vec<(&str, &str)> = Vec::new();
     let axiom = String::from("X");
@@ -13,9 +14,10 @@ fn main() {
             .arg("src/pturtle.py")
             .arg(instructions)
             .spawn()
-            .expect("yikes");
+            .expect("yikes"); // Hey, I don't judge your error messages
 }
 
+// Performs the substitutions laid out in the given ruleset
 fn replace(rule_set: Vec<(&str, &str)>,
     axiom: String,
     generation: usize,
